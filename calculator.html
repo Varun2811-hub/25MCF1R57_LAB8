@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+           
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .calculator {
+            width: 100%;
+            max-width: 320px; 
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .display {
+            background-color: #222;
+            color: #fff;
+            font-size: 2.5rem;
+            text-align: right;
+            width: 100%;
+            padding: 20px;
+            border: none;
+            box-sizing: border-box; 
+        }
+
+        .keys {
+            display: flex;
+            flex-wrap: wrap; 
+            background-color: #d4d4d4;
+        }
+
+        .keys button {
+            width: 25%; 
+            padding: 20px;
+            font-size: 1.2rem;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            box-sizing: border-box; 
+            
+            
+            transition: background-color 0.1s ease;
+        }
+
+        
+        .keys button.zero {
+            width: 50%;
+        }
+
+       
+        .keys button.operator {
+            background-color: #f39c12; 
+            color: white;
+        }
+
+        
+        .keys button:hover {
+            background-color: #e9e9e9;
+        }
+        .keys button.operator:hover {
+            background-color: #e8930c;
+        }
+        .keys button:active {
+            background-color: #d0d0d0;
+        }
+        
+        
+        .keys button:focus {
+            outline: 2px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="calculator">
+        <input type="text" class="display" value="0" readonly aria-label="Calculator Display">
+        
+        <div class="keys">
+            <button>AC</button>
+            <button>+/-</button>
+            <button>%</button>
+            <button class="operator">/</button>
+            
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">*</button>
+            
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">-</button>
+            
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">+</button>
+            
+            <button class="zero">0</button>
+            <button>.</button>
+            <button class="operator">=</button>
+        </div>
+    </main>
+
+</body>
+</html>
